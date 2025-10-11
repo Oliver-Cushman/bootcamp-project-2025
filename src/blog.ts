@@ -14,7 +14,7 @@ const blogs: Blog[] = [
     description: "desc",
     image: "./images/about-pic.jpg",
     imageAlt: "alt",
-    slug: "slug",
+    slug: "./blogs/blog1.html",
   },
   {
     title: "Blog 2",
@@ -22,20 +22,21 @@ const blogs: Blog[] = [
     description: "desc",
     image: "./images/about-pic.jpg",
     imageAlt: "alt",
-    slug: "slug",
+    slug: "./blogs/blog2.html",
   },
 ];
 
 function addBlogs() {
   const blogContainer = document.getElementById("blog-container");
   blogs.forEach((blog) => {
-    let newBlog = document.createElement("div");
+    let newBlog = document.createElement("a");
     let blogImage = document.createElement("div");
     let blogText = document.createElement("div");
     let h1 = document.createElement("h1");
     let img = document.createElement("img");
     let p = document.createElement("p");
     newBlog.className = "blog-element";
+    newBlog.href = blog.slug;
     blogText.className = "blog-text";
     h1.textContent = blog.title;
     img.src = blog.image;
