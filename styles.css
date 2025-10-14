@@ -157,6 +157,9 @@ main {
 
   font-weight: lighter;
 
+  color: var(--cg-white);
+  text-decoration: none;
+
   /* Debug border */
   /* border: 2px solid green; */
 }
