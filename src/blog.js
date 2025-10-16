@@ -1,19 +1,19 @@
 var blogs = [
     {
-        title: "Blog 1",
-        date: "10/10/2025",
-        description: "desc",
-        image: "./images/about-pic.jpg",
-        imageAlt: "alt",
-        slug: "./blogs/blog1.html",
-    },
-    {
         title: "Blog 2",
         date: "10/10/2025",
         description: "desc",
         image: "./images/about-pic.jpg",
         imageAlt: "alt",
         slug: "./blogs/blog2.html",
+    },
+    {
+        title: "A Little Bit of Everything",
+        date: "10/15/2025",
+        description: "An overview of my blog!",
+        image: "./images/sunset.jpg",
+        imageAlt: "alt",
+        slug: "./blogs/blog1.html",
     },
 ];
 function addBlogs() {
@@ -25,16 +25,19 @@ function addBlogs() {
         var h1 = document.createElement("h1");
         var img = document.createElement("img");
         var p = document.createElement("p");
+        var date = document.createElement("p");
         newBlog.className = "blog-element";
         newBlog.href = blog.slug;
         blogText.className = "blog-text";
         h1.textContent = blog.title;
+        date.textContent = blog.date;
         img.src = blog.image;
         img.alt = blog.imageAlt;
         img.className = "blog-img";
         p.textContent = blog.description;
         blogImage.append(img);
         blogText.append(h1);
+        blogText.append(date);
         blogText.append(p);
         newBlog.append(blogImage);
         newBlog.append(blogText);
