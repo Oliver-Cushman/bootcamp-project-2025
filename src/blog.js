@@ -1,9 +1,9 @@
 var blogs = [
     {
-        title: "Blog 2",
-        date: "10/10/2025",
-        description: "desc",
-        image: "./images/about-pic.jpg",
+        title: "Sunny San Diego",
+        date: "10/16/2025",
+        description: "A few places I love in San Diego!",
+        image: "./images/skyline.jpg",
         imageAlt: "alt",
         slug: "./blogs/blog2.html",
     },
