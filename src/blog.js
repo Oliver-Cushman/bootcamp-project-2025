@@ -5,7 +5,7 @@ var blogs = [
         description: "A few places I love in San Diego!",
         image: "./images/skyline.jpg",
         imageAlt: "alt",
-        slug: "./blogs/blog2.html",
+        slug: "./blogs/sunny-san-diego.html",
     },
     {
         title: "A Little Bit of Everything",
@@ -13,7 +13,7 @@ var blogs = [
         description: "An overview of my blog!",
         image: "./images/sunset.jpg",
         imageAlt: "alt",
-        slug: "./blogs/blog1.html",
+        slug: "./blogs/a-little-bit-of-everything.html",
     },
 ];
 function addBlogs() {
@@ -31,9 +31,9 @@ function addBlogs() {
         blogText.className = "blog-text";
         h1.textContent = blog.title;
         date.textContent = blog.date;
+        img.className = "blog-img";
         img.src = blog.image;
         img.alt = blog.imageAlt;
-        img.className = "blog-img";
         p.textContent = blog.description;
         blogImage.append(img);
         blogText.append(h1);
