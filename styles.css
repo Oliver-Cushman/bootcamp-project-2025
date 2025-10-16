@@ -9,6 +9,8 @@
   --cg-darkest-pink: rgb(83, 34, 46);
   --cg-dark-pink: rgb(121, 44, 62);
   --cg-light-pink: rgb(255, 83, 123);
+  --cg-dark-transparent: rgba(60, 40, 36, 0);
+  --cg-dark-opaque: rgb(60, 40, 36, 1);
 }
 
 html {
@@ -49,7 +51,12 @@ body {
   align-items: center;
   text-align: center;
 
-  background-color: transparent;
+  background: linear-gradient(
+    to top,
+    var(--cg-dark-transparent) 0%,
+    var(--cg-dark-opaque) 100%
+  );
+
   padding: 0px 0px;
 
   /* Debug border */
