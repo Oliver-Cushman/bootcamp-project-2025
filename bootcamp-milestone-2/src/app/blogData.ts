@@ -25,3 +25,5 @@ const blogs: Blog[] = [
     slug: "./blogs/a-little-bit-of-everything.html",
   },
 ];
+
+export default blogs;
