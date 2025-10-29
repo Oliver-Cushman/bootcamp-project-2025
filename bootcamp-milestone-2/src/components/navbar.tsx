@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react';
 import style from "./navbar.module.css";
 import Link from "next/link";
-import blogs from "../app/blogData";
 
 export default function Navbar() {
   return (
