@@ -17,7 +17,7 @@ const sections: ResumeSectionData[] = [
       {
         title: "Bachelor of Computer Science",
         subtitles: [
-          "California Polytechnic State Univerity San Luis Obispo",
+          "California Polytechnic State University San Luis Obispo",
           "Expected Graduation Date: June 2029",
         ],
       },
