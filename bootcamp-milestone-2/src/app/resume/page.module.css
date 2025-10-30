@@ -22,6 +22,11 @@
   justify-content: center;
 }
 
+.download_btn:hover {
+  background-color: var(--cg-dark-pink);
+  cursor: pointer;
+}
+
 .resume {
   background: var(--cg-darkest-pink);
   padding: 40px;
