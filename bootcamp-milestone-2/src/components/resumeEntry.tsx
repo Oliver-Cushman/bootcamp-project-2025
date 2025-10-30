@@ -3,7 +3,7 @@ import { ResumeEntryData } from "@/static/resumeData";
 
 export default function ResumeEntry(props: ResumeEntryData) {
   return (
-    <div>
+    <div className={styles.entry}>
       <h3>
         {props.title}
         {props.category ? ": " + props.category : ""}
@@ -17,8 +17,8 @@ export default function ResumeEntry(props: ResumeEntryData) {
       </div>
       <ul>
         {props.points
-          ? props.points.map((point) => {
-              return <li>{point}</li>;
+          ? props.points.map((point, i) => {
+              return <li key={i}>{point}</li>;
             })
           : null}
       </ul>
