@@ -1,0 +1,48 @@
+.page_title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Manrope;
+  color: white;
+}
+
+.download_btn {
+  width: 70px;
+  height: 30px;
+  border: none;
+  font-family: monospace;
+  background-color: var(--cg-darkest-pink);
+  color: var(--cg-white);
+  border-radius: 15px;
+  transition: background-color 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume {
+  background: var(--cg-darkest-pink);
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 70%;
+  color: white;
+  font-family: monospace;
+}
+
+.resume h2 {
+  font-family: Manrope;
+}
+
+.resume_container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
