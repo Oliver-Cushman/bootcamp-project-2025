@@ -1,5 +1,3 @@
-import { randomUUID } from "crypto";
-
 type Blog = {
   title: string;
   date: string;
@@ -7,7 +5,6 @@ type Blog = {
   image: string;
   imageAlt: string;
   slug: string;
-  id: string
 };
 
 const blogs: Blog[] = [
@@ -18,7 +15,6 @@ const blogs: Blog[] = [
     image: "./images/skyline.jpg",
     imageAlt: "alt",
     slug: "./blogs/sunny-san-diego.html",
-    id: randomUUID()
   },
   {
     title: "A Little Bit of Everything",
@@ -27,7 +23,6 @@ const blogs: Blog[] = [
     image: "./images/sunset.jpg",
     imageAlt: "alt",
     slug: "./blogs/a-little-bit-of-everything.html",
-    id: randomUUID()
   },
 ];
 
