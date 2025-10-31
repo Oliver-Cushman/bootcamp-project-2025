@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link 
+      href='https://fonts.googleapis.com/css?family=Manrope' 
+      rel='stylesheet'
+    >
+  </head>
+  <body>
+    <video autoplay muted loop id="beach-video">
+      <source src="./images/beach.mp4" type="video/mp4" />
+    </video>
+    <nav class="navbar">
+      <h1 class="logo">
+        <a href="index.html">Oliver Cushman</a>
+      </h1>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="page-title">Resume</h1>
+      <a class="download-link" href="OliverCushman.pdf" download ><p>Download</p></a>
+      <div class="resume">
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="entry">
+            <h3 class="entry-title">Bachelor of Computer Science</h3>
+            <p class="entry-info">California Polytechnic State Univerity San Luis Obispo | Expected Graduation Date: June 2029</p>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">Coursework</h3>
+            <ul class="course-list">
+              <li>Fundamentals of Computer Science (equivalent)</li>
+              <li>Introduction to Computing (equivalent)</li>
+              <li>Data Structures</li>
+            </ul>
+          </div>
+        </section>
+        <section class="section">
+          <h2 class="section-title">Skills</h2>
+          <div class="entry">
+            <h3 class="entry-title">Programming Languages:</h3>
+            <ul class="skill-list">
+              <li>Java</li>
+              <li>C++</li>
+              <li>C#</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">Software Tools:</h3>
+            <ul class="skill-list">
+              <li>Visual Studio Code</li>
+              <li>Git</li>
+              <li>REST API</li>
+              <li>JSON</li>
+              <li>Firebase</li>
+            </ul>
+          </div>
+        </section>
+        <section class="section">
+          <h2 class="section-title">Projects</h2>
+          <div class="entry">
+            <h3 class="entry-title">FRC Reefscape Robot Software</h3>
+            <p class="entry-info">
+              <strong>Robotics Team Project</strong></br>
+              Languages and Tools Utilized: Java, WPILib, Phoenix API, Limelight, PathPlanner, AdvantageKit, NetworkTables</br>
+              - Full-stack robot control application for a robot that plays the FRC 2025 game, Reefscape</br>
+              - Controls motors with PID algorithms running on data from encoders and cameras</br>
+              - Autonomous functionality in gameplay using position localization with computer vision pipelines</br>
+              - Realtime and post-match data logging for easy debugging</br>
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">FRC Scouting App</h3>
+            <p class="entry-info">
+              <strong>Robotics Team Project</strong></br>
+              Languages and Tools Utilized: JavaScript, React, Firebase, JSON</br>
+              - Mobile-intended web application for evaluating robots at competition</br>
+              - Custom React-based widgets</br>
+              - Clean and simple UI for ease-of-use at competition</br>
+              - Data storage in JSON-like structure in Firebase</br>
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">PatriDashboard</h3>
+            <p class="entry-info">
+              <strong>Robotics Team Project</strong></br>
+              Languages and Tools Utilized, TypeScript, React, Electron, NetworkTables</br>
+              - Custom React-based web dashboard made for tuning constants in robot software</br>
+              - Updating values in dashboard updates constants in running robot program</br>
+              - Dashboard connects to the same network as the robot using NetworkTables 4 protocol</br>
+              - Makes it extremely easy to tune constants</br>
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">Flashcard App</h3>
+            <p class="entry-info">
+              <strong>Computer Science Club Project</strong></br>
+              Languages and Tools Utilized: JavaScript, React, Firebase</br>
+              - Flashcard website specialized for courses at our own high school</br>
+              - Flashcard decks, users, and user progress on flashcard decks stored in Firebase</br>
+              - Users authenticated with Firebase</br>
+              - Clean frontend UI for simplicity</br>
+            </p>
+          </div>
+        </section>
+        <section class="section">
+          <h2 class="section-title">Experience</h2>
+          <div class="entry">
+            <h3 class="entry-title">Robotics Team Programmer & Driver</h3>
+            <p class="entry-info">
+              - Wrote majority of robot code in 2025 season and contributed significantly in 2024 season</br>
+              - Motor controls, sensor data handling, subsystem programming, driver control programming and autonomous control programming</br>
+              - Frontend for internal robot evaluation websites</br>
+              - Drove robot at competitions including world championship in 2025 season</br>
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="entry-title">Computer Science Club Member</h3>
+            <p class="entry-info">
+              - Worked on flashcard website</br>
+              - Participated in programming competitions</br>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">© 2025 Oliver's Personal Website | All Rights Reserved</footer>
+  </body>
+</html>
