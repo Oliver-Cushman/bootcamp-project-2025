@@ -1,0 +1,27 @@
+import mongoose, { Schema } from "mongoose";
+
+export type BlogData = {
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  slug: string;
+  id: string;
+};
+
+// schema
+const blogSchema = new Schema<BlogData>({
+  title: { type: String, required: true },
+  date: { type: String, required: true },
+  description: { type: String, required: true },
+  image: { type: String, required: true },
+  imageAlt: { type: String, required: true },
+  slug: { type: String, required: true },
+  id: { type: String, required: true },
+});
+
+// collection & model
+const Blog = mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);
+
+export default Blog;
