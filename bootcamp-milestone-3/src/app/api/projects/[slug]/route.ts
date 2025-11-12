@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import connectDB from "@/database/db";
-import blogSchema, {BlogData} from "@/database/blogSchema";
+import portfolioSchema, { ProjectData } from "@/database/portfolioSchema";
 
 type IParams = {
   params: {
@@ -9,14 +9,13 @@ type IParams = {
 };
 
 export async function GET(req: NextRequest, { params }: IParams) {
-  // If { params } looks confusing, check the note below this code block
 
   await connectDB(); // function from db.ts before
   const slug = params.slug; // another destructure
 
   try {
-    const blog: BlogData = await blogSchema.findOne({ id: slug }).orFail();
-    return NextResponse.json(blog);
+    const project: ProjectData = await portfolioSchema.findOne({ id: slug }).orFail();
+    return NextResponse.json(project);
   } catch (err) {
     return NextResponse.json("Blog not found.", { status: 404 });
   }
