@@ -15,4 +15,15 @@ const connectDB = async () => {
   }
 };
 
+// logs collections for debugging
+export async function checkCollections() {
+  await mongoose.connect(url);
+
+  const collections = await mongoose.connection.db?.listCollections().toArray();
+  console.log(
+    "Collections:",
+    collections ? collections.map((c) => c.name) : "No collections"
+  );
+}
+
 export default connectDB;

@@ -1,7 +1,7 @@
-import { Project } from "@/static/portfolioData";
+import { ProjectData } from "@/database/portfolioSchema";
 import styles from "./portfolioProject.module.css";
 
-export default function PortfolioProject(props: Project) {
+export default function PortfolioProject(props: ProjectData) {
   return (
     <a className={styles.project_details} href={props.link} id={props.id}>
       <img
