@@ -13,7 +13,7 @@ export async function GET(req: NextRequest, { params }: IParams) {
 
   await connectDB(); // function from db.ts before
   const { slug } = params; // another destructure
-a
+
   try {
     const blog: BlogData = await blogSchema.findOne({ id: slug }).orFail();
     return NextResponse.json(blog);
