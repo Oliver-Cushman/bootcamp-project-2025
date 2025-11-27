@@ -1,4 +1,19 @@
+import ImageWithCaption from "@/components/imageWithCaption";
 import mongoose, { Schema } from "mongoose";
+
+export type Paragraph = {
+  type: "paragraph";
+  body: string;
+};
+
+export type ImageWithCaption = {
+  type: "image";
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+export type BodySection = Paragraph | ImageWithCaption;
 
 export type BlogData = {
   title: string;
@@ -6,9 +21,18 @@ export type BlogData = {
   description: string;
   image: string;
   imageAlt: string;
+  body: Array<BodySection>;
   slug: string;
   id: string;
 };
+
+const bodySectionSchema = new Schema<BodySection>({
+  type: { type: String, required: true },
+  body: String,
+  src: String,
+  alt: String,
+  caption: String,
+});
 
 // schema
 const blogSchema = new Schema<BlogData>({
@@ -17,6 +41,7 @@ const blogSchema = new Schema<BlogData>({
   description: { type: String, required: true },
   image: { type: String, required: true },
   imageAlt: { type: String, required: true },
+  body: bodySectionSchema,
   slug: { type: String, required: true },
   id: { type: String, required: true },
 });

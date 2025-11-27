@@ -5,7 +5,11 @@ import { BlogData } from "@/database/blogSchema";
 
 export default function BlogPreview(props: BlogData) {
   return (
-    <Link className={styles.blog_element} href={props.slug} id={props.id}>
+    <Link
+      className={styles.blog_element}
+      href={"/blog/" + props.slug}
+      id={props.id}
+    >
       <div>
         <img
           src={props.image}

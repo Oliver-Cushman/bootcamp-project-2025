@@ -17,7 +17,7 @@ async function getBlogs() {
   }
 }
 
-export default async function BlogPage() {
+export default async function BlogPreviewsPage() {
   const blogs = await getBlogs();
 
   return (
@@ -32,6 +32,7 @@ export default async function BlogPage() {
                 description: blog.description,
                 image: blog.image,
                 imageAlt: blog.imageAlt,
+                body: [],
                 slug: blog.slug,
                 id: blog.id,
               };
