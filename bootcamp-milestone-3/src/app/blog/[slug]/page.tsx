@@ -1,6 +1,7 @@
 import ImageWithCaption from "@/components/imageWithCaption";
 import styles from "./page.module.css";
 import { BlogData, BodySection } from "@/database/blogSchema";
+import BlogComment from "@/components/blogComment";
 
 type Props = {
   params: { slug: string };
@@ -37,17 +38,23 @@ export default async function BlogPage({ params }: Props) {
           <h1 className={styles.page_title}>{blog.title}</h1>
           <h2>{blog.date}</h2>
           <div className={styles.blog_post}>
-            {blog.body.map((bodySection: BodySection, i) => {
+            {blog.body.map((bodySection: BodySection, index) => {
               return bodySection.type === "paragraph" ? (
-                <p key={i}>{bodySection.body}</p>
+                <p key={index}>{bodySection.body}</p>
               ) : (
                 <ImageWithCaption
-                  key={i}
+                  key={index}
                   image={bodySection.src}
                   alt={bodySection.alt}
                   caption={bodySection.caption}
                 />
               );
+            })}
+          </div>
+          <h2 className={styles.page_title}>Comments</h2>
+          <div className={styles.comment_section}>
+            {blog.comments.map((comment, index) => {
+              return <BlogComment {...comment} key={index} />;
             })}
           </div>
         </div>

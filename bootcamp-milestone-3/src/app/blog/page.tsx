@@ -1,5 +1,5 @@
 import React from "react";
-import BlogPreview from "@/components/blogPreview";
+import BlogPreview, { BlogPreviewProps } from "@/components/blogPreview";
 // import blogs from "@/static/blogData";
 import styles from "./page.module.css";
 import Blog, { BlogData } from "@/database/blogSchema";
@@ -26,13 +26,12 @@ export default async function BlogPreviewsPage() {
       <div className={styles.blog_container}>
         {blogs
           ? blogs.map((blog) => {
-              let props: BlogData = {
+              let props: BlogPreviewProps = {
                 title: blog.title,
                 date: blog.date,
                 description: blog.description,
                 image: blog.image,
                 imageAlt: blog.imageAlt,
-                body: [],
                 slug: blog.slug,
                 id: blog.id,
               };

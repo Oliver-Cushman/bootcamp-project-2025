@@ -34,3 +34,9 @@
 .page_title {
   font-family: Manrope;
 }
+
+.comment_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}

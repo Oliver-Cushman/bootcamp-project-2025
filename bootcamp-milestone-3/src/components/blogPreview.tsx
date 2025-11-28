@@ -1,9 +1,18 @@
 import React from "react";
 import styles from "./blogPreview.module.css";
 import Link from "next/link";
-import { BlogData } from "@/database/blogSchema";
 
-export default function BlogPreview(props: BlogData) {
+export type BlogPreviewProps = {
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  id: string;
+  slug: string;
+};
+
+export default function BlogPreview(props: BlogPreviewProps) {
   return (
     <Link
       className={styles.blog_element}
