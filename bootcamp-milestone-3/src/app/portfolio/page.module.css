@@ -1,0 +1,17 @@
+.page_title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: Manrope;
+  color: white;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 1.5em;
+  justify-items: center;
+  width: 100%;
+  align-items: start;
+  box-sizing: border-box;
+}

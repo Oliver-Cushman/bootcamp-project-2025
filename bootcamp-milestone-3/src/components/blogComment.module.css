@@ -1,0 +1,33 @@
+.comment_container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cg-darkest-pink);
+  margin: 0px 20px 20px 20px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+}
+
+.comment_header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.comment_user {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.comment_time {
+  flex: 1;
+  font-size: 10px;
+  align-items: center;
+  text-align: right;
+}
+
+.comment_body {
+  width: 100%;
+}
