@@ -10,8 +10,8 @@ export default function ResumeEntry(props: ResumeEntryData) {
       </h3>
       <div>
         {props.subtitles
-          ? props.subtitles.map((subtitle, i) => {
-              return <div key={i}>{subtitle}</div>;
+          ? props.subtitles.map((subtitle, index) => {
+              return <div key={index}>{subtitle}</div>;
             })
           : null}
       </div>

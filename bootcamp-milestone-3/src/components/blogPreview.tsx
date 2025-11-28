@@ -4,13 +4,18 @@ import Link from "next/link";
 
 export type BlogPreviewProps = {
   title: string;
-  date: string;
+  date: Date;
   description: string;
   image: string;
   imageAlt: string;
   id: string;
   slug: string;
 };
+
+function parseDate(date: Date | string | number) {
+  date = new Date(date);
+  return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+}
 
 export default function BlogPreview(props: BlogPreviewProps) {
   return (
@@ -28,7 +33,7 @@ export default function BlogPreview(props: BlogPreviewProps) {
       </div>
       <div className={styles.blog_text}>
         <h1>{props.title}</h1>
-        <p>{props.date}</p>
+        <p>{parseDate(props.date)}</p>
         <p>{props.description}</p>
       </div>
     </Link>

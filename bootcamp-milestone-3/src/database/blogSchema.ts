@@ -17,13 +17,13 @@ export type BodySection = Paragraph | ImageWithCaption;
 
 export type Comment = {
   user?: string;
-  time: string;
+  time: Date;
   body: string;
 };
 
 export type BlogData = {
   title: string;
-  date: string;
+  date: Date;
   description: string;
   image: string;
   imageAlt: string;
@@ -43,14 +43,14 @@ const bodySectionSchema = new Schema<BodySection>({
 
 const commentSchema = new Schema<Comment>({
   user: String,
-  time: { type: String, required: true },
+  time: { type: Date, required: true },
   body: { type: String, required: true }
 });
 
 // schema
 const blogSchema = new Schema<BlogData>({
   title: { type: String, required: true },
-  date: { type: String, required: true },
+  date: { type: Date, required: true },
   description: { type: String, required: true },
   image: { type: String, required: true },
   imageAlt: { type: String, required: true },
