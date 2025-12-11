@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "bad-words": "^4.0.0",
     "mongodb": "^7.0.0",
     "mongoose": "^8.19.3",
     "next": "15.5.7",
