@@ -20,7 +20,7 @@ export async function POST(req: NextRequest, { params }: IParams) {
     return NextResponse.json("Comment must not be empty", { status: 400 });
   }
   if (filter.isProfane(comment.body) || filter.isProfane(comment.user)) {
-    return NextResponse.json("Comment contains profanity!", { status: 400 });
+    return NextResponse.json("Comment must not contian profanity", { status: 400 });
   }
 
   await connectDB();

@@ -40,7 +40,9 @@
 
 .submit_container {
   display: flex;
+  flex-direction: row;
   justify-content: end;
+  align-items: center;
   margin-top: 10px;
 }
 
@@ -66,4 +68,10 @@
   cursor: pointer;
   background-color: var(--cg-light-pink);
   transform: scale(1.05);
+}
+
+.comment_status {
+  margin-right: 10px;
+  font-size: 11px;
+  text-align: left;
 }

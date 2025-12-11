@@ -10,6 +10,7 @@ export type CommentWriterProps = {
 export default function CommentWriter(props: CommentWriterProps) {
   const [commentUser, setCommentUser] = useState("");
   const [commentBody, setCommentBody] = useState("");
+  const [commentStatus, setCommentStatus] = useState("");
 
   const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCommentUser(e.target.value);
@@ -33,6 +34,7 @@ export default function CommentWriter(props: CommentWriterProps) {
       },
       body: JSON.stringify(comment),
     });
+    setCommentStatus(await res.json());
   };
 
   return (
@@ -59,6 +61,7 @@ export default function CommentWriter(props: CommentWriterProps) {
         ></textarea>
 
         <div className={styles.submit_container}>
+          <p className={styles.comment_status}>{commentStatus}</p>
           <button
             className={styles.submit_comment}
             type="submit"
