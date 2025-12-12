@@ -1,0 +1,72 @@
+.contact_container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit_button {
+  width: 70px;
+  height: 30px;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: var(--cg-dark-pink);
+  color: var(--cg-white);
+  border-radius: 15px;
+  transition: background-color 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.submit_button:hover {
+  cursor: pointer;
+  background-color: var(--cg-light-pink);
+  transform: scale(1.05);
+}
+
+.contact_container input[type="text"],
+.contact_container input[type="email"] {
+  height: 18px;
+}
+
+.contact_container input[type="text"],
+.contact_container input[type="email"],
+.contact_container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  font-size: 16px;
+  resize: none;
+  border-radius: 18px;
+  font-family: monospace;
+}
+
+.contact_container input[type="text"]:focus,
+.contact_container input[type="email"]:focus,
+.contact_container textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.contact_container form {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_status {
+  color: white;
+  font-family: monospace;
+}

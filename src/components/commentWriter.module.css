@@ -28,7 +28,8 @@
   color: white;
 }
 
-::placeholder {
+.comment_writer_user::placeholder,
+.comment_writer_body::placeholder {
   color: white;
 }
 
