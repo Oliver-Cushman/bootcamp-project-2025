@@ -2,7 +2,6 @@
 import styles from "./contactForm.module.css";
 import { useState, MouseEvent, ChangeEvent } from "react";
 import { EmailData } from "@/static/emailData";
-
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,6 +41,12 @@ export default function ContactForm() {
       body: JSON.stringify(emailData),
     });
     setFormStatus(await res.json());
+    if (res.status == 200) {
+      setName("");
+      setEmail("");
+      setTitle("");
+      setMessage("");
+    }
   };
 
   return (
@@ -51,22 +56,26 @@ export default function ContactForm() {
           type="text"
           id="name"
           placeholder="Name"
+          value={name}
           onChange={handleNameChange}
         />
         <input
           type="email"
           id="email"
           placeholder="Email"
+          value={email}
           onChange={handleEmailChange}
         />
         <input
           type="text"
           id="title"
           placeholder="Title"
+          value={title}
           onChange={handleTitleChange}
         />
         <textarea
           placeholder="Message"
+          value={message}
           onChange={handlemessageChange}
         ></textarea>
         <p className={styles.form_status}>{formStatus}</p>
