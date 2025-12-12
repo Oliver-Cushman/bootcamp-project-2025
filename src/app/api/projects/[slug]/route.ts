@@ -3,14 +3,14 @@ import connectDB from "@/database/db";
 import Portfolio, { ProjectData } from "@/database/portfolioSchema";
 
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export async function GET(req: NextRequest, { params }: IParams) {
   await connectDB(); // function from db.ts before
-  const slug = params.slug; // another destructure
+  const { slug } = await params; // another destructure
 
   try {
     const project: ProjectData = await Portfolio.findOne({ id: slug }).orFail();
