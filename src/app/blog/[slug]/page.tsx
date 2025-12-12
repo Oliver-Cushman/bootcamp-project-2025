@@ -2,6 +2,7 @@ import ImageWithCaption from "@/components/imageWithCaption";
 import styles from "./page.module.css";
 import { BlogData, BodySection } from "@/database/blogSchema";
 import BlogComment from "@/components/blogComment";
+import CommentWriter, { CommentWriterProps } from "@/components/commentWriter";
 
 type Props = {
   params: { slug: string };
@@ -35,6 +36,7 @@ function parseDate(date: Date | string | number) {
 export default async function BlogPage({ params }: Props) {
   const { slug } = await params;
   const blog: BlogData = await getBlog(slug);
+  const commentWriterProps: CommentWriterProps = { slug: slug };
 
   return (
     <div className={styles.blog_post_container}>
@@ -57,6 +59,7 @@ export default async function BlogPage({ params }: Props) {
             })}
           </div>
           <h2 className={styles.page_title}>Comments</h2>
+          <CommentWriter {...commentWriterProps} />
           <div className={styles.comment_section}>
             {blog.comments.map((comment, index) => {
               return <BlogComment {...comment} key={index} />;

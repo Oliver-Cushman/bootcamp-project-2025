@@ -18,9 +18,11 @@ const months = [
 
 function parseTime(time: Date | string | number) {
   time = new Date(time);
-  return `${
-    months[time.getMonth()]
-  } ${time.getDate()} ${time.getHours()}:${time.getMinutes() < 10 ? "0" + time.getMinutes().toString() : time.getMinutes()}`;
+  return `${months[time.getMonth()]} ${time.getDate()} ${time.getHours()}:${
+    time.getMinutes() < 10
+      ? "0" + time.getMinutes().toString()
+      : time.getMinutes()
+  }`;
 }
 
 export default function BlogComment(props: Comment) {
