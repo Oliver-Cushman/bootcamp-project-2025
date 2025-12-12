@@ -12,7 +12,7 @@ type IParams = {
 export async function POST(req: NextRequest, { params }: IParams) {
   try {
     const filter = new Filter();
-    const commentwhy: Comment = await req.json();
+    const comment: Comment = await req.json();
     comment.user = comment.user || "Anonymous";
     comment.time = comment.time || new Date();
     const { slug } = await params;
