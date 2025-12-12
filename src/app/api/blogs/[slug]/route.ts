@@ -3,9 +3,9 @@ import connectDB from "@/database/db";
 import Blog, { BlogData } from "@/database/blogSchema";
 
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export async function GET(req: NextRequest, { params }: IParams) {

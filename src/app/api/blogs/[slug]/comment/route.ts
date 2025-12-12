@@ -4,15 +4,15 @@ import Blog, { Comment } from "@/database/blogSchema";
 import { Filter } from "bad-words";
 
 type IParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export async function POST(req: NextRequest, { params }: IParams) {
   try {
     const filter = new Filter();
-    const comment: Comment = await req.json();
+    const commentwhy: Comment = await req.json();
     comment.user = comment.user || "Anonymous";
     comment.time = comment.time || new Date();
     const { slug } = await params;
