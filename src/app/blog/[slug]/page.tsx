@@ -11,9 +11,12 @@ type Props = {
 async function getBlog(slug: string) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`http://localhost:3000/api/blogs/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_URL as string}/api/blogs/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
     // This checks that the GET request was successful
     if (!res.ok) {
       throw new Error("Failed to fetch blog");

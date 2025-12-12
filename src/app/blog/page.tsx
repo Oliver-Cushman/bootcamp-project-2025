@@ -2,7 +2,7 @@ import React from "react";
 import BlogPreview, { BlogPreviewProps } from "@/components/blogPreview";
 // import blogs from "@/static/blogData";
 import styles from "./page.module.css";
-import Blog, { BlogData } from "@/database/blogSchema";
+import Blog from "@/database/blogSchema";
 import connectDB from "@/database/db";
 
 async function getBlogs() {
